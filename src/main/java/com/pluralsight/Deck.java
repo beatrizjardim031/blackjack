@@ -27,9 +27,8 @@ public class Deck {
 
     public Card deal() {
         // deal the top card (if there are any cards left
-        if (cards.size() > 0) {
-            Card card = cards.remove(0);
-            return card;
+        if (!cards.isEmpty()) {
+            return cards.remove(0);
         } else {
             return null;
         }

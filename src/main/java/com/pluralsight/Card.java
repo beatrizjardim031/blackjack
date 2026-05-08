@@ -34,14 +34,12 @@ public class Card {
     public int getPointValue() {
        // only return the value if the card is face up
         if (isFaceUp) {
-       // determine point value and return it
-       // A = 11
-       // K, Q, J = 10
-       // all numeric cards are equal to their face value
-        } else {
-            return 0;
+            switch (value) {
+                case "A" -> {return 11;}
+                case "K", "Q", "J" -> {return 10;}
+                default -> {return Integer.parseInt(value);}
+            }
         }
-
         return 0;
     }
 
